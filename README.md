@@ -1,5 +1,7 @@
 # air-cnc
-prototype using JS6, Node, ReactJS, MongoDB (mongoose)
+Prototype using JS6, Node, ReactJS, MongoDB (mongoose)
+
+Its an application to connect developers with a company.
 
 To test the application, tip:
 If you have Yarn:
