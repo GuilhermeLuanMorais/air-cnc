@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import api from '../../services/api';
-import camera from '../../assets/camera.png';
+import camera from '../../assets/camera.svg';
 
 import './styles.css';
 
