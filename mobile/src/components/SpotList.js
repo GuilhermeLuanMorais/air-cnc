@@ -6,7 +6,7 @@ import api from '../services/api';
 
 function SpotList({tech, navigation}) {
     const [spots, setSpots] = useState([]);
-
+ 
     useEffect(() => {
         async function loadSpots() {
             const response = await api.get('/spots', {
@@ -14,6 +14,7 @@ function SpotList({tech, navigation}) {
             })
 
             setSpots(response.data);
+
             console.log(response.data);
         }
 
@@ -25,8 +26,8 @@ function SpotList({tech, navigation}) {
     }
 
     return (
-        <View style={StyleSheet.container}>
-            <Text sryle={styles.title}>Empresas que usam <Text style={styles.bold}>{tech}</Text></Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>Empresas que usam <Text style={styles.bold}>{tech}</Text></Text>
 
             <FlatList
                 style={styles.list}
@@ -40,7 +41,7 @@ function SpotList({tech, navigation}) {
                         <Text style={styles.company}>{item.company}</Text>
                         <Text style={styles.price}>{item.price ? `R$${item.price}/dia` : 'Gratuito'}</Text>
                         <TouchableOpacity onPress={() => handleNavigate(item._id)} style={styles.button}>
-                        <Text style={styles.buttonText}>Solicitar reserva</Text>
+                            <Text style={styles.buttonText}>Solicitar reserva</Text>
                         </TouchableOpacity>
                     </View>
                 )}
